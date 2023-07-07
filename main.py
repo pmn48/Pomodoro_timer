@@ -45,7 +45,6 @@ def pause_timer():
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
     global reps, is_paused, time_current
-    is_paused = False
     reps += 1
     if not is_paused:  # if the timer is not paused (not true), start from the beginning
         if reps % 2 != 0:
@@ -57,8 +56,6 @@ def start_timer():
         else:
             count_down(SHORT_BREAK_MIN * 60)
             timer_lab.config(text="Break", fg=PINK)
-    else:  # if the timer is resumed, start from the current time
-        count_down(time_current)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
