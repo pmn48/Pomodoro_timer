@@ -32,7 +32,7 @@ def reset_timer():
 # ---------------------------- PAUSE MECHANISM -------------------------------- #
 def pause_timer():
     global is_paused, time_current
-    if time_current != 0:  # at the beginning hitting the pause button will not cause anything changes
+    if time_current != 0:  # at the beginning hitting the pause button will not cause any changes
         if not is_paused:  # if initially is_pause is not True (if False)
             is_paused = True
             button_pau.config(text="Resume")
