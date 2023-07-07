@@ -66,8 +66,8 @@ def count_down(num):
         num_sec = int(num % 60)
         if num_sec < 10:
             num_sec = f'0{num_sec}'
-        if num_min == 0:
-            num_min = "00"
+        if num_min < 10:
+            num_min = f"0{num_min}"
         canvas.itemconfig(timer_text, text=f"{num_min}:{num_sec}")
         if num > 0:
             timer = window.after(1000, count_down,
